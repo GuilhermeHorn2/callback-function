@@ -1,0 +1,26 @@
+/* Simple calculator */
+
+let calc = function(num1,num2,calctype){
+ if (calctype === 'add'){
+  return num1 + num2;
+ }
+ else if (calctype === 'multiply'){
+  return num1 * num2;
+ }
+}
+console.log(calc(1,2,'add'))
+
+/* Using callback :*/
+
+let add = function(a,b){
+ return a+b;
+}
+let multiply = function(a,b){
+ return a*b;
+}
+let calc = function(num1,num2,callback){
+ return callback(num1,num2);
+}
+
+console.log(calc(1,2,add))
+
